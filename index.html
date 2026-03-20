@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aero Industrial - Calculadora DJI</title>
+    
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1a1a1a">
+    <link rel="apple-touch-icon" href="logo-pwa.svg">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="main-header">
+            <div class="logo-partner dji-logo"><img src="logo-dji.png" alt="DJI"></div>
+            <div class="logo-aero">
+                <img src="logo-aero.png" alt="Aero Industrial">
+                <h1>SISTEMA DE ENERGÍA</h1>
+            </div>
+            <div class="logo-partner eco-logo"><img src="logo-ecoflow.png" alt="EcoFlow"></div>
+        </header>
+        
+        <div class="panel">
+            <div class="form-group">
+                <label>1. Estación EcoFlow:</label>
+                <select id="sel-eco"></select>
+            </div>
+            <div class="form-group">
+                <label>2. Equipo / Sistema DJI:</label>
+                <select id="sel-eq"></select>
+            </div>
+            <div class="form-group">
+                <label>3. Modo de Operación:</label>
+                <select id="sel-modo"></select>
+            </div>
+            <div class="form-group checkboxes" id="panel-accesorios" style="display:none;">
+                <label>4. Sumar Accesorios al Hub:</label>
+                <label><input type="checkbox" id="chk-rc"> Cargar Control RC (+46.8 Wh)</label>
+                <label><input type="checkbox" id="chk-wb37"> Cargar Batería WB37 (+37 Wh)</label>
+            </div>
+        </div>
+
+        <div class="results">
+            <h2>RESULTADOS ESTIMADOS</h2>
+            <div class="result-row">
+                <span id="label-ciclos">Recargas posibles:</span>
+                <span id="res-recargas" class="value">-</span>
+            </div>
+            <div class="result-row">
+                <span>Tiempo estimado:</span>
+                <span id="res-tiempo" class="value">-</span>
+            </div>
+            <div class="result-row alert-row">
+                <span>Inversor:</span>
+                <span id="res-alerta" class="value status-ok">[OK] Operación Segura</span>
+            </div>
+        </div>
+        <footer class="main-footer">
+            <p>Aero Industrial Enterprise - Querétaro</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./sw.js')
+            .then(reg => console.log('PWA Lista: SW registrado'))
+            .catch(err => console.log('Error SW:', err));
+        }
+    </script>
+</body>
+</html>
