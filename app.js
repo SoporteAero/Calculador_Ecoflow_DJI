@@ -1,10 +1,23 @@
 
 const ecoflows = [
+    // --- Serie EcoFlow RIVER ---
     { n: "RIVER 2", wh: 256, wM: 300 },
-    { n: "RIVER 2 MAX", wh: 512, wM: 500 },
     { n: "RIVER 3", wh: 230, wM: 300 },
+    { n: "RIVER 2 MAX", wh: 512, wM: 500 },
+    { n: "RIVER 2 PRO", wh: 768, wM: 800 },
+
+    // --- Serie EcoFlow DELTA ---
+    { n: "DELTA 2", wh: 1024, wM: 1800 },
     { n: "DELTA 3", wh: 1024, wM: 1800 },
-    { n: "DELTA 3 PRO", wh: 4096, wM: 4000 }
+    { n: "DELTA 2 MAX", wh: 2048, wM: 2400 },
+    { n: "DELTA PRO", wh: 3600, wM: 3600 },
+    { n: "DELTA 3 PRO", wh: 4096, wM: 4000 },
+
+    // --- Serie DJI Power ---
+    { n: "DJI Power 500", wh: 512, wM: 1000 },
+    { n: "DJI Power 1000 (V1)", wh: 1024, wM: 2200 },
+    { n: "DJI Power 1000 V2", wh: 1024, wM: 2600 },
+    { n: "DJI Power 2000", wh: 2048, wM: 3000 }
 ];
 
 const db = [
