@@ -1,4 +1,4 @@
-const cacheName = 'aero-v5';
+const cacheName = 'aero-v6';
 const assets = [
   './', 
   './index.html', 
